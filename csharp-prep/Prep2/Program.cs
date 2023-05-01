@@ -1,3 +1,4 @@
+namespace ConsolePrep2{
 using System;
 
 class Program
@@ -40,3 +41,4 @@ class Program
     
         
 }
+}   

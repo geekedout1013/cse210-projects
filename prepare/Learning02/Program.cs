@@ -5,34 +5,34 @@ class Program
     static void Main(string[] args)
     {
         
-       Console.WriteLine("What is your grade?");
-        string grade = Console.ReadLine();
-        int number = int.Parse(grade);
+        Job job1 = new Job();
+        job1._company ="Google";
+        job1._jobTitle ="Web Developer";
+        job1._startYear =2017;
+        job1._endYear =2023;
 
-        if (number < 90)
-        {
-            if (number < 90 && number > 79)
+        Job job2 = new Job();
+        job2._company ="Acme Inc";
+        job2._jobTitle ="Web Desginer";
+        job2._startYear =2010;
+        job2._endYear =2017;
 
-            {
-                Console.WriteLine("You have a B in this clas.");
-            }
-            else if (number < 80 && number > 69)
-            {
-                Console.WriteLine("You have a C in this class.");
-            }
-            else if (number < 70 && number > 59)
-            {
-                Console.WriteLine("You have a D in this class.");
-            }
-            else
-            {
-                Console.WriteLine("You have an F in this class.");
+        Job job3 = new Job();
+        job3._company ="Stark Enterprises";
+        job3._jobTitle ="R & D";
+        job3._startYear =2006;
+        job3._endYear =2010;
 
-            }
-        }
-        else
-        {
-            Console.WriteLine("You have an A in this class.");
-        }
+        Resume resume1 = new Resume();
+        resume1._name ="Reese Edwards";
+        resume1._jobs = new List<Job>();
+        resume1._jobs.Add(job1);
+        resume1._jobs.Add(job2);
+        resume1._jobs.Add(job3);
+
+        resume1.Display();
+    
+
+        
     }
 }
